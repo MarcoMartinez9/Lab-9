@@ -118,23 +118,23 @@
     
         public Tree(int value)
         {
-    	    children = new ArrayList<Tree>();
+	    children = new ArrayList<Tree>();
 		this.value = value;
         }
     
         public int getValue()
         {
-    	    return value;
+	    return value;
         }
     
         public ArrayList<Tree> getChildren()
         {
-    	    return children;
+	    return children;
         }
     
         public void add(Tree child)
         {
-    	    children.add(child);
+	    children.add(child);
         }
     }
     
@@ -168,10 +168,12 @@
     {
         if (height == 1) 
         {
-    	    //TODO
+		return branchingFactor;
         }
-        
-    	//TODO
+        else
+	{
+		branchingFactor = branchingFactor + nnaryTreeSize(branchingFactor*height, height-1);
+	}
     }
 
     /** **********************************************************************
@@ -267,8 +269,8 @@
          */
         else 
         {
-        	return area + circledSquared(!square, length * Math.sqrt(2), depth - 1);
-    	}
+		return area + circledSquared(!square, length * Math.sqrt(2), depth - 1);
+	}
     }
 %>
 <center>
