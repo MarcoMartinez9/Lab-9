@@ -190,7 +190,7 @@
 
 	for(Tree key: tree.getChildren)
 	{
-		sum = sum + key.getValue() + treeSum(key); 
+		sum = sum + tree.getValue() + treeSum(key); 
 	}
 
 	return sum;	
