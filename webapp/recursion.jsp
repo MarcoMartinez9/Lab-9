@@ -78,7 +78,7 @@
      */
     public int fibonacci(int n)
     {
-        if(n <= 1)
+        if(n <= 2)
 	{
 		return n;
 	{
@@ -186,7 +186,14 @@
      */
     public int treeSum(Tree tree)
     {
-    	//TODO
+	int sum = 0;
+
+	for(int i = 0; i < tree.size(); ++i)
+	{
+		sum = sum + tree.get(i).getValue();
+	}
+
+	return sum;	
     }
     
     /** **********************************************************************
