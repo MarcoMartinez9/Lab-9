@@ -188,9 +188,9 @@
     {
 	int sum = 0;
 
-	for(int i = 0; i < tree.size(); ++i)
+	for(Tree key: tree.getChildren)
 	{
-		sum = sum + tree.get(i).getValue();
+		sum = sum + key.getValue() + treeSum(key); 
 	}
 
 	return sum;	
